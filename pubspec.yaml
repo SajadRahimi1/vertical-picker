@@ -1,7 +1,7 @@
 name: vertical_picker
-description: A new Flutter package project.
+description: flutter plugin which gives you a vertical picker that allow users pick item in scollable list
 version: 0.0.1
-homepage:
+homepage: https://github.com/SajadRahimi1/vertical-picker
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
