@@ -85,6 +85,7 @@ items: List.generate( 10,(index) => Icon(Icons.flutter_dash)),
 
 # Some important tips
 🔴 You must set itemHeight parameter a little longer that your items to items be in the best alignment
+
 🔴 If you use Text as item, it's better that use Text in child of Center to Text goes in center of selectable items in vertical picker
  
 
