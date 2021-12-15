@@ -12,6 +12,7 @@ class VerticalPicker extends StatelessWidget {
       this.borderColor,
       this.borderThickness,
       this.leftMargin,
+      this.loop,
       this.rightMargin})
       : assert(itemHeight > 0),
         super(key: key);
@@ -40,6 +41,9 @@ class VerticalPicker extends StatelessWidget {
   /// Left margin of line that are in top and bottom of each item
   /// default value is 0
   final double? leftMargin;
+
+  /// If it's true when scroll of picker arrive to end, first item apears as next item (but still index is 0)
+  final bool? loop;
   @override
   Widget build(BuildContext context) {
     return CupertinoPicker(
@@ -52,6 +56,9 @@ class VerticalPicker extends StatelessWidget {
       // The uniform height of all items
       itemExtent: itemHeight,
 
+      looping: loop ?? false,
+
+      diameterRatio: MediaQuery.of(context).size.height,
       // line that are in top and bottom select item
       selectionOverlay: Stack(
         children: [
